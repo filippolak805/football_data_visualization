@@ -20,4 +20,4 @@ Large data files are **not stored in Git** and are downloaded on demand.
 
 ## Setup Instructions
 
-Run ...
+Run run_mac_linux.sh or run_windows.bat.
