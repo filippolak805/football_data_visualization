@@ -1,0 +1,133 @@
+/* Hide RangeSlider tooltip bubbles */
+/* .rc-slider-tooltip {
+  display: none !important;
+} */
+
+/* Force or hide any rc-slider value tooltip/labels across versions */
+.rc-slider-tooltip,
+.rc-slider-tooltip * ,
+.rc-slider-tooltip-inner,
+.rc-tooltip,
+.rc-tooltip * ,
+.rc-tooltip-inner {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.rc-slider-handle-tooltip,
+.rc-slider-handle-tooltip * {
+  display: none !important;
+}
+
+.rc-slider-handle::before,
+.rc-slider-handle::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Keep slider marks readable */
+.rc-slider-mark-text {
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* Put marks slightly lower so they don't collide with the rail */
+.rc-slider-mark {
+  top: 22px;
+}
+
+/* Give slider more bottom space so marks fit */
+#time-slider {
+  padding-bottom: 18px;
+}
+
+.time-slider-wrap { padding-right: 28px; }
+
+/* Some RangeSlider versions use indexed track classes */
+.rc-slider-track-1,
+.rc-slider-track-2 {
+  background-color: #6F8FB3;
+}
+
+/* If the current version renders a wrapper for multiple tracks */
+.rc-slider-tracks {
+  background-color: transparent;
+}
+
+ /* RangeSlider track (selected range) */
+ .rc-slider-track {
+-  background-color: #9fd3ff;
++  background-color: #6F8FB3; !important;
+ }
+
+ /* RangeSlider rail (unselected range) */
+ .rc-slider-rail {
+-  background-color: #dbeafe;
++  background-color: #E1E7EE; !important;
+ }
+
+ /* RangeSlider handle */
+ .rc-slider-handle {
+-  border: solid 2px #9fd3ff;
++  border: solid 2px #6F8FB3; !important;
+ }
+
+ .rc-slider-handle:hover {
+-  border-color: #9fd3ff;
++  border-color: #6F8FB3;
+ }
+
+ .rc-slider-handle:focus {
+-  border-color: #9fd3ff;
++  border-color: #6F8FB3;
+   box-shadow: none;
+ }
+
+/* Global typography */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #263238;
+  background: #f6f8fb;
+}
+
+h2, h4 {
+  letter-spacing: 0.2px;
+}
+
+/* Dashboard Sections */
+.section-global {
+  background: #EEF2F6; /* #f4f7fb, e5e5e5 */
+  border: 1px solid #D3DAE3; /* dbe4f0, bdbdbd */
+  border-left: 3px solid #7A8A9A; /* 6e6e6e */
+  border-radius: 12px;
+  padding: 12px 14px 14px 14px;
+  margin-bottom: 18px;
+}
+
+.section-timefiltered {
+  background: #F0F4FA; /* f7faf7, eaf2ff, EAF2FF */
+  border: 1px solid #D6DEE8; /* dcebdc, bcd3ff, C9DBF5 */
+  border-left: 3px solid #6F8FB3; /* 4a7dff, 4C78A8 */
+  border-radius: 12px;
+  padding: 12px 14px 14px 14px;
+  margin-bottom: 18px;
+}
+
+/* Section headers */
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+/* Blend Plotly canvases into the section cards */
+.js-plotly-plot .plotly, .js-plotly-plot .plot-container {
+  background: transparent !important;
+}

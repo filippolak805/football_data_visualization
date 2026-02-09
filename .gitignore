@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Data that should NOT be committed
+data/external/
+data/cache/
+*.duckdb
+*.parquet
+
+# OS junk
+.DS_Store
+Thumbs.db
